@@ -28,7 +28,7 @@ function sumValues(num1, num2, add) {
  * @returns An array of each price's new price, after the discount is applied. Or false, if prices array is empty.
  */
 function discountPrices(prices, discount) {
-    if (typeof discount !== 'number') {
+    if (typeof discount !== 'number' || !Array.isArray(prices)) {
         return false;
     }
     const discounted = [];
